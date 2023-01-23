@@ -60,3 +60,10 @@ body {
   color: white;
   text-transform: capitalize;
 }
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+}

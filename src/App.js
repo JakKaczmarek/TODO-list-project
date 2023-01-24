@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="todo-app">
-      <h1>Todo list</h1>
+      <h1 className="todo-h1">Todo list</h1>
       <TodoForm addTodo={addTodo} />
       {todos.map((todo) => {
         return <TodoList removeTodo={removeTodo} todo={todo} key={todo.id} />;

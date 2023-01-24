@@ -67,3 +67,12 @@ body {
   font-size: 25px;
   cursor: pointer;
 }
+
+.todo-form {
+  margin-bottom: 29px;
+}
+
+.todo-h1 {
+  margin-bottom: 7px;
+  margin-top: 7px;
+}

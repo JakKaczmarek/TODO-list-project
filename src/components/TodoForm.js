@@ -14,9 +14,10 @@ export default function TodoForm(props) {
       <input
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        className="todo-input"
+        className="todo-input-text"
         placeholder="Add anything"
       />
+      <input type="date" className="todo-input-date"></input>
       <button type="submit" className="todo-button">
         Add
       </button>

@@ -35,19 +35,26 @@ body {
   background: white;
   padding: 16px;
   border-radius: 5px;
-  width: 90%;
+  width: 75%;
 }
 
-.todo-input {
-  padding: 14px 32px 14px 16px;
+.todo-input-text {
+  padding: 15px 32px 15px 16px;
   border-radius: 4px 0 0 4px;
   border: 2px solid rgb(15, 105, 78);
   outline: none;
-  width: 320px;
+  width: 350px;
 }
 
+.todo-input-date {
+  padding: 14px 32px 14px 16px;
+  margin-left: 1px;
+  border: 2px solid rgb(15, 105, 78);
+  outline: none;
+  width: 147px;
+}
 .todo-button {
-  padding: 16px;
+  padding: 17px;
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;

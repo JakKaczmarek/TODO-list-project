@@ -13,7 +13,6 @@ function App() {
     }
     let todo = { id: id, text: text, completed: false };
     let newTodos = [todo, ...todos];
-    console.log(newTodos);
     setTodos(newTodos);
   };
 

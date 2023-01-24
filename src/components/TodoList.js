@@ -6,13 +6,16 @@ export default function TodoList(props) {
 
   return (
     <div className="todo-row">
-      {props.todo.text}
-      <div className="icon-container">
-        <RiCloseCircleLine
-          className="icon"
-          onClick={() => removeTodo(todo.id)}
-        />
+      <div className="todo-row-text">
+        <div className="icon-container">
+          <RiCloseCircleLine
+            className="icon"
+            onClick={() => removeTodo(todo.id)}
+          />
+        </div>
+        {props.todo.text}
       </div>
+      <div className="todo-row-date">Date</div>
     </div>
   );
 }

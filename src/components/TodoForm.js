@@ -2,11 +2,14 @@ import React, { useState } from "react";
 
 export default function TodoForm(props) {
   const [input, setInput] = useState("");
+  const [newDate, setNewDate] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     props.addTodo(input);
+    // props.addTodo(newDate);
     setInput("");
+    // setNewDate("");
   };
 
   return (
@@ -17,7 +20,12 @@ export default function TodoForm(props) {
         className="todo-input-text"
         placeholder="Add anything"
       />
-      <input type="date" className="todo-input-date"></input>
+      <input
+        type="date"
+        className="todo-input-date"
+        // onChange={(e) => setNewDate(e.target.value)}
+        value={newDate}
+      ></input>
       <button type="submit" className="todo-button">
         Add
       </button>

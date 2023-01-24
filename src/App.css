@@ -38,6 +38,12 @@ body {
   width: 75%;
 }
 
+.todo-row-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .todo-input-text {
   padding: 15px 32px 15px 16px;
   border-radius: 4px 0 0 4px;
@@ -73,6 +79,7 @@ body {
   align-items: center;
   font-size: 25px;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .todo-form {

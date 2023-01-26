@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
+import TodoSort from "./components/TodoSort";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -24,6 +25,7 @@ function App() {
     <div className="todo-app">
       <h1 className="todo-h1">Todo list</h1>
       <TodoForm addTodo={addTodo} />
+      <TodoSort />
       {todos.map((todo) => {
         return <TodoList removeTodo={removeTodo} todo={todo} key={todo.id} />;
       })}

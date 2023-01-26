@@ -61,6 +61,7 @@ body {
 }
 .todo-button {
   padding: 17px;
+  margin-left: 1px;
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;

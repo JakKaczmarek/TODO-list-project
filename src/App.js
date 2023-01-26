@@ -6,14 +6,13 @@ import TodoList from "./components/TodoList";
 function App() {
   const [todos, setTodos] = useState([]);
 
-  const addTodo = (text) => {
+  const addTodo = (input, newDate) => {
     let id = 1;
     if (todos.length > 0) {
       id = todos[0].id + 1;
     }
-    let todo = { id: id, text: text, completed: false };
-    let newTodos = [todo, ...todos];
-    setTodos(newTodos);
+    let todo = { id: id, text: input, date: newDate, completed: false };
+    setTodos((prev) => [...prev, todo]);
   };
 
   const removeTodo = (id) => {

@@ -6,9 +6,9 @@ export default function TodoForm(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.addTodo(input);
+    props.addTodo(input, newDate);
     // props.addTodo(newDate);
-    setInput("");
+    // setInput("");
     // setNewDate("");
   };
 
@@ -23,7 +23,7 @@ export default function TodoForm(props) {
       <input
         type="date"
         className="todo-input-date"
-        // onChange={(e) => setNewDate(e.target.value)}
+        onChange={(e) => setNewDate(e.target.value)}
         value={newDate}
       ></input>
       <button type="submit" className="todo-button">

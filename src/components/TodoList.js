@@ -13,9 +13,9 @@ export default function TodoList(props) {
             onClick={() => removeTodo(todo.id)}
           />
         </div>
-        {props.todo.text}
+        {todo.text}
       </div>
-      <div className="todo-row-date">Date</div>
+      <div className="todo-row-date">{todo.date}</div>
     </div>
   );
 }

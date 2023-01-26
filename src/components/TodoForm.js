@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-export default function TodoForm(props) {
+export default function TodoForm({ addTodo }) {
   const [input, setInput] = useState("");
   const [newDate, setNewDate] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.addTodo(input, newDate);
+    addTodo(input, newDate);
     // props.addTodo(newDate);
     // setInput("");
     // setNewDate("");

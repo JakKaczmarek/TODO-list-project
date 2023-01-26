@@ -1,24 +1,24 @@
 import { useState } from "react";
 import "./App.css";
 import TodoForm from "./components/TodoForm";
-import TodoList from "./components/TodoList";
+import TodoListItem from "./components/TodoListItem";
 import TodoSort from "./components/TodoSort";
 
 function App() {
   const [todos, setTodos] = useState([]);
 
-  const addTodo = (input, newDate) => {
+  const addTodo = (text, date) => {
     let id = 1;
     if (todos.length > 0) {
-      id = todos[0].id + 1;
+      id = todos[todos.length - 1].id + 1;
+      // id = todos[0].id + 1; zle
     }
-    let todo = { id: id, text: input, date: newDate, completed: false };
+    let todo = { id, text, date, completed: false };
     setTodos((prev) => [...prev, todo]);
   };
 
   const removeTodo = (id) => {
-    let updatedTodos = [...todos].filter((todo) => todo.id !== id);
-    setTodos(updatedTodos);
+    setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
 
   return (
@@ -26,9 +26,13 @@ function App() {
       <h1 className="todo-h1">Todo list</h1>
       <TodoForm addTodo={addTodo} />
       <TodoSort />
-      {todos.map((todo) => {
-        return <TodoList removeTodo={removeTodo} todo={todo} key={todo.id} />;
-      })}
+      <ul>
+        {todos.map((todo) => {
+          return (
+            <TodoListItem removeTodo={removeTodo} todo={todo} key={todo.id} />
+          );
+        })}
+      </ul>
     </div>
   );
 }

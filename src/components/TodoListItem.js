@@ -1,11 +1,9 @@
 import React from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
 
-export default function TodoList(props) {
-  const { todo, removeTodo } = props;
-
+export default function TodoListItem({ todo, removeTodo }) {
   return (
-    <div className="todo-row">
+    <li className="todo-row">
       <div className="todo-row-text">
         <div className="icon-container">
           <RiCloseCircleLine
@@ -16,6 +14,6 @@ export default function TodoList(props) {
         {todo.text}
       </div>
       <div className="todo-row-date">{todo.date}</div>
-    </div>
+    </li>
   );
 }

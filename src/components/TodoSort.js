@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TodoSort() {
   const sortByNumber = () => {
-    sort((a, b) => b.date - a.date);
+    // sort((a, b) => b.date - a.date);
     // if () {
     //   sort((a, b) => b.date - a.date);
     // } else {

@@ -5,14 +5,17 @@ import TodoSort from "../components/TodoSort";
 
 export default function Login() {
   const [todos, setTodos] = useState([]);
+  const [counter, setCounter] = useState(0);
 
   const addTodo = (text, date) => {
-    let id = 1;
-    if (todos.length > 0) {
-      id = todos[todos.length - 1].id + 1;
-      // id = todos[0].id + 1; zle
-    }
-    let todo = { id, text, date, completed: false };
+    // let id = 1
+    // id = todos[todos.length - 1].id + 1;
+    // id = todos[0].id + 1; zle
+
+    let todo = { id: counter + 1, text, date, completed: false };
+
+    setCounter((prev) => prev + 1);
+
     setTodos((prev) => [...prev, todo]);
   };
 

@@ -24,7 +24,7 @@ export default function Login() {
     <div className="todo-app">
       <h1 className="todo-h1">Todo list</h1>
       <TodoForm addTodo={addTodo} />
-      <TodoSort />
+      <TodoSort todos={todos} setTodos={setTodos} />
       <ul>
         {todos.map((todo) => {
           return (

@@ -12,6 +12,7 @@ import Grid from "@mui/material/Grid";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+// import { makeStyles } from "tss-react/mui";
 
 function Copyright(props) {
   return (
@@ -30,6 +31,16 @@ function Copyright(props) {
     </Typography>
   );
 }
+
+// const useStyles = makeStyles((theme) =>
+//   createStyles({
+//     customTextField: {
+//       "&.Mui-focused": {
+//         border: "2px solid grey",
+//       },
+//     },
+//   })
+// );
 
 const theme = createTheme();
 
@@ -83,7 +94,7 @@ export default function Login() {
               alignItems: "center",
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+            <Avatar sx={{ m: 1, bgcolor: "grey" }}>
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
@@ -104,6 +115,13 @@ export default function Login() {
                 name="email"
                 autoComplete="email"
                 autoFocus
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    "&.Mui-focused fieldSet": {
+                      borderColor: "gray",
+                    },
+                  },
+                }}
               />
               <TextField
                 margin="normal"
@@ -114,6 +132,13 @@ export default function Login() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    "&.Mui-focused fieldSet": {
+                      borderColor: "gray",
+                    },
+                  },
+                }}
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
@@ -123,18 +148,26 @@ export default function Login() {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                sx={{ mt: 3, mb: 2, background: "black" }}
               >
                 Sign In
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2">
+                  <Link
+                    href="#"
+                    variant="body2"
+                    sx={{ color: "black", textDecorationColor: "grey" }}
+                  >
                     Forgot password?
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link
+                    href="#"
+                    variant="body2"
+                    sx={{ color: "black", textDecorationColor: "grey" }}
+                  >
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>

@@ -7,11 +7,12 @@
 }
 
 body {
-  background: linear-gradient(
+  background: white;
+  /* linear-gradient(
     90deg,
     rgb(22, 91, 69) 0%,
-    rgb(89, 162, 137) 100%
-  );
+    rgb(89, 162, 137) 100% */
+  /* ); */
 }
 .todo-app {
   display: flex;
@@ -47,7 +48,7 @@ body {
 .todo-input-text {
   padding: 15px 32px 15px 16px;
   border-radius: 4px 0 0 4px;
-  border: 2px solid rgb(15, 105, 78);
+  border: 2px solid black;
   outline: none;
   width: 350px;
 }
@@ -55,7 +56,7 @@ body {
 .todo-input-date {
   padding: 14px 32px 14px 16px;
   margin-left: 1px;
-  border: 2px solid rgb(15, 105, 78);
+  border: 2px solid black;
   outline: none;
   width: 147px;
 }
@@ -66,11 +67,7 @@ body {
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   outline: none;
-  background: linear-gradient(
-    90deg,
-    rgb(22, 91, 69) 0%,
-    rgb(89, 162, 137) 100%
-  );
+  background: linear-gradient(90deg, rgb(7, 16, 13) 0%, rgb(52, 59, 57) 100%);
   color: white;
   text-transform: capitalize;
 }
@@ -82,11 +79,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
   outline: none;
-  background: linear-gradient(
-    90deg,
-    rgb(22, 91, 69) 0%,
-    rgb(89, 162, 137) 100%
-  );
+  background: linear-gradient(90deg, rgb(7, 16, 13) 0%, rgb(52, 59, 57) 100%);
   color: rgb(255, 255, 255);
 }
 

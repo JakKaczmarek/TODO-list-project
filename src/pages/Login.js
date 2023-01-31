@@ -32,16 +32,6 @@ function Copyright(props) {
   );
 }
 
-// const useStyles = makeStyles((theme) =>
-//   createStyles({
-//     customTextField: {
-//       "&.Mui-focused": {
-//         border: "2px solid grey",
-//       },
-//     },
-//   })
-// );
-
 const theme = createTheme();
 
 export default function Login() {
@@ -84,7 +74,16 @@ export default function Login() {
             backgroundPosition: "center",
           }}
         />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <Grid
+          item
+          xs={12}
+          sm={8}
+          md={5}
+          component={Paper}
+          elevation={6}
+          square
+          // backgroundColor="rgb(233, 223, 223)"
+        >
           <Box
             sx={{
               my: 8,

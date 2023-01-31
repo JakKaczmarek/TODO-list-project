@@ -25,15 +25,19 @@ body {
   margin: 128px auto;
   border-radius: 10px;
   padding-bottom: 32px;
+  -moz-box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
 }
 
 .todo-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 4px auto;
+  margin: 10px auto;
   color: rgb(0, 0, 0);
   background: white;
+  -moz-box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
   padding: 16px;
   border-radius: 5px;
   width: 75%;
@@ -51,6 +55,8 @@ body {
   border: 2px solid black;
   outline: none;
   width: 350px;
+  -moz-box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
 }
 
 .todo-input-date {
@@ -59,6 +65,8 @@ body {
   border: 2px solid black;
   outline: none;
   width: 147px;
+  -moz-box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
 }
 .todo-button {
   padding: 17px;
@@ -68,6 +76,8 @@ body {
   cursor: pointer;
   outline: none;
   background: linear-gradient(90deg, rgb(7, 16, 13) 0%, rgb(52, 59, 57) 100%);
+  -moz-box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
   color: white;
   text-transform: capitalize;
 }
@@ -81,6 +91,8 @@ body {
   outline: none;
   background: linear-gradient(90deg, rgb(7, 16, 13) 0%, rgb(52, 59, 57) 100%);
   color: rgb(255, 255, 255);
+  -moz-box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
 }
 
 .icon-container {

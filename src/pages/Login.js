@@ -110,7 +110,7 @@ export default function Login() {
                 fullWidth
                 id="email"
                 label="Email Address"
-                InputLabelProps={{ style: { color: "red" } }}
+                InputLabelProps={{ style: { color: "gray" } }}
                 name="email"
                 autoComplete="email"
                 autoFocus
@@ -128,6 +128,7 @@ export default function Login() {
                 fullWidth
                 name="password"
                 label="Password"
+                InputLabelProps={{ style: { color: "gray" } }}
                 type="password"
                 id="password"
                 autoComplete="current-password"

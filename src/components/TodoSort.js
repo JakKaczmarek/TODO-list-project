@@ -7,11 +7,15 @@ export default function TodoSort({ todos, setTodos }) {
     console.log(sortType);
     // setSortType(sortType === "DESC" ? "ASC" : "DESC");
 
-    if (sortType === "ASC") {
-      todos.sort((a, b) => (b.date > a.date ? 1 : -1));
-    } else {
-      todos.sort((a, b) => (b.date > a.date ? -1 : 1));
-    }
+    todos.sort((a, b) =>
+      b.date > a.date ? (sortType === "ASC" ? 1 : -1) : -1
+    );
+
+    // if (sortType === "ASC") {
+    //   todos.sort((a, b) => (b.date > a.date ? 1 : -1));
+    // } else {
+    //   todos.sort((a, b) => (b.date > a.date ? -1 : 1));
+    // }
     setSortType(sortType === "DESC" ? "ASC" : "DESC");
     setTodos([...todos]);
     console.log(todos);

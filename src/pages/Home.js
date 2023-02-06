@@ -12,14 +12,10 @@ export default function Login() {
     // id = todos[todos.length - 1].id + 1;
     // id = todos[0].id + 1; zle
 
-<<<<<<< HEAD
     const todo = { id: counter + 1, text, date };
 
     const todosCopy = [...todos];
     todosCopy.push(todo);
-=======
-    const todo = { id: counter + 1, text, date, completed: false };
->>>>>>> 7e015d56ec3bc90991013f967f0749abb8281ca7
 
     setCounter((prev) => prev + 1);
 

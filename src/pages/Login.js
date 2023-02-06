@@ -22,12 +22,11 @@ function Copyright(props) {
       align="center"
       {...props}
     >
-      {"Copyright © "}
+      Copyright ©
       <Link color="inherit" href="https://mui.com/">
         Your Website
       </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
+      {new Date().getFullYear()}.
     </Typography>
   );
 }
@@ -111,6 +110,7 @@ export default function Login() {
                 fullWidth
                 id="email"
                 label="Email Address"
+                InputLabelProps={{ style: { color: "red" } }}
                 name="email"
                 autoComplete="email"
                 autoFocus

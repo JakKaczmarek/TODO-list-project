@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TodoForm from "../components/TodoForm";
 import TodoListItem from "../components/TodoListItem";
 import TodoSort from "../components/TodoSort";
@@ -12,16 +12,27 @@ export default function Login() {
     // id = todos[todos.length - 1].id + 1;
     // id = todos[0].id + 1; zle
 
-    let todo = { id: counter + 1, text, date, completed: false };
+    const todo = { id: counter + 1, text, date };
+
+    const todosCopy = [...todos];
+    todosCopy.push(todo);
 
     setCounter((prev) => prev + 1);
 
     setTodos((prev) => [...prev, todo]);
+    localStorage.setItem("todos", JSON.stringify(todosCopy));
+    localStorage.setItem("counter", JSON.stringify(counter + 1));
   };
 
   const removeTodo = (id) => {
+    // localStorage.setItem
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
+
+  useEffect(() => {
+    setTodos(JSON.parse(localStorage.getItem("todos")) || []);
+    setCounter(JSON.parse(localStorage.getItem("counter")) || 0);
+  }, []);
 
   return (
     <div className="todo-app">
@@ -29,7 +40,7 @@ export default function Login() {
       <TodoForm addTodo={addTodo} />
       <TodoSort todos={todos} setTodos={setTodos} />
       <ul>
-        {todos.map((todo) => {
+        {todos?.map((todo) => {
           return (
             <TodoListItem removeTodo={removeTodo} todo={todo} key={todo.id} />
           );
@@ -38,3 +49,5 @@ export default function Login() {
     </div>
   );
 }
+
+//localStorage only supports strings. Use JSON.stringify() and JSON.parse()

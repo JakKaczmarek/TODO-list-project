@@ -12,6 +12,7 @@ export default function Login() {
 
     const todosCopy = [...todos];
     todosCopy.push(todo);
+    // todosCopy = [...todosCopy, todo] <<<
 
     setCounter((prev) => prev + 1);
 
@@ -21,7 +22,9 @@ export default function Login() {
   };
 
   const removeTodo = (id) => {
-    localStorage.setItem("todos", JSON.stringify(todos));
+    let todosCopy = todos.filter((todo) => todo.id !== id);
+    localStorage.setItem("todos", JSON.stringify(todosCopy));
+
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
 

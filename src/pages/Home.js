@@ -8,10 +8,6 @@ export default function Login() {
   const [counter, setCounter] = useState(0);
 
   const addTodo = (text, date) => {
-    // let id = 1
-    // id = todos[todos.length - 1].id + 1;
-    // id = todos[0].id + 1; zle
-
     const todo = { id: counter + 1, text, date };
 
     const todosCopy = [...todos];
@@ -25,7 +21,7 @@ export default function Login() {
   };
 
   const removeTodo = (id) => {
-    // localStorage.setItem
+    localStorage.setItem("todos", JSON.stringify(todos));
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
 

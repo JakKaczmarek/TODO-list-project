@@ -19,12 +19,16 @@ export default function TodoForm({ addTodo }) {
         onChange={(e) => setInput(e.target.value)}
         className="todo-input-text"
         placeholder="Add anything"
+        data-testid="text-input"
       />
       <input
         type="date"
         className="todo-input-date"
-        onChange={(e) => setNewDate(e.target.value)}
+        onChange={(e) => {
+          setNewDate(e.target.value);
+        }}
         value={newDate}
+        data-testid="date-input"
       ></input>
       <button type="submit" className="todo-button">
         Add

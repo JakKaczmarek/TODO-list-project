@@ -10,9 +10,7 @@ export default function Login() {
   const addTodo = (text, date) => {
     const todo = { id: counter + 1, text, date };
 
-    const todosCopy = [...todos];
-    todosCopy.push(todo);
-    // todosCopy = [...todosCopy, todo] <<<
+    const todosCopy = [...todos, todo];
 
     setCounter((prev) => prev + 1);
 
@@ -22,10 +20,11 @@ export default function Login() {
   };
 
   const removeTodo = (id) => {
-    let todosCopy = todos.filter((todo) => todo.id !== id);
-    localStorage.setItem("todos", JSON.stringify(todosCopy));
-
-    setTodos((prev) => prev.filter((todo) => todo.id !== id));
+    setTodos((prev) => {
+      const todosCopy = prev.filter((todo) => todo.id !== id);
+      localStorage.setItem("todos", JSON.stringify(todosCopy));
+      return todosCopy;
+    });
   };
 
   useEffect(() => {
